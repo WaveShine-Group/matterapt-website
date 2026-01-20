@@ -26,7 +26,7 @@ export function HeartbeatSection({ children, className = "", delay = 0, id }: He
       transition: {
         duration: 0.6,
         delay: delay,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: [0.33, 1, 0.68, 1]
       }
     }
   }
@@ -76,7 +76,7 @@ export function HeartbeatElement({
       transition: {
         duration: 0.5,
         delay: delay,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: [0.33, 1, 0.68, 1]
       }
     }
   }
