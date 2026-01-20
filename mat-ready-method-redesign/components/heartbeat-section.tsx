@@ -12,28 +12,28 @@ interface HeartbeatSectionProps {
 
 export function HeartbeatSection({ children, className = "", delay = 0, id }: HeartbeatSectionProps) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.2 })
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
   const shouldReduceMotion = useReducedMotion()
 
   const heartbeatVariants = {
     hidden: {
       opacity: 0,
-      y: 20
+      y: 30
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.6,
         delay: delay,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.25, 0.1, 0.25, 1]
       }
     }
   }
 
   const reducedMotionVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.2, delay } }
+    visible: { opacity: 1, transition: { duration: 0.4, delay } }
   }
 
   return (
@@ -62,28 +62,28 @@ export function HeartbeatElement({
   as?: "div" | "span" | "article" | "aside"
 }) {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, amount: 0.3 })
+  const isInView = useInView(ref, { once: true, amount: 0.3 })
   const shouldReduceMotion = useReducedMotion()
 
   const heartbeatVariants = {
     hidden: {
       opacity: 0,
-      y: 15
+      y: 24
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.25,
+        duration: 0.5,
         delay: delay,
-        ease: [0.22, 1, 0.36, 1]
+        ease: [0.25, 0.1, 0.25, 1]
       }
     }
   }
 
   const reducedMotionVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.15, delay } }
+    visible: { opacity: 1, transition: { duration: 0.35, delay } }
   }
 
   const MotionComponent = motion[Component]
