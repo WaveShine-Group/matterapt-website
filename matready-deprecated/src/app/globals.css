@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-matready-black text-matready-white;
+  }
+
+  ::selection {
+    @apply bg-matready-red text-white;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+
+  .container-max {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-matready-red to-matready-red-light bg-clip-text text-transparent;
+  }
+
+  .glow-red {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.3);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
