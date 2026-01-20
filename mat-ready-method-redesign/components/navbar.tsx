@@ -86,17 +86,22 @@ export function Navbar() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3 group">
-              <Image
-                src="/matready-logo.jpeg"
-                alt="MAT Ready Method"
-                width={200}
-                height={50}
-                className="h-12 sm:h-14 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
-                priority
-              />
-              <span
-                className="px-2 py-1 text-xs font-medium rounded-full transition-all duration-200 group-hover:scale-105"
+            <div className="flex items-center gap-3">
+              <a href="#" className="group">
+                <Image
+                  src="/matready-logo.jpeg"
+                  alt="MAT Ready Method"
+                  width={200}
+                  height={50}
+                  className="h-12 sm:h-14 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
+                  priority
+                />
+              </a>
+              <a
+                href="https://matterapt.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-2 py-1 text-xs font-medium rounded-full transition-all duration-200 hover:scale-105"
                 style={{ backgroundColor: 'var(--mattera-lime)', color: 'var(--mattera-navy)' }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = 'hsl(210 100% 50%)'
@@ -110,8 +115,8 @@ export function Navbar() {
                 }}
               >
                 by Mattera PT
-              </span>
-            </a>
+              </a>
+            </div>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1">
